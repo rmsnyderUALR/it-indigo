@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #F2B705;
+    font-family: "Source Code Pro", monospace;
+}
+ 
+main{
+    background-color: #ffffff;
+    width: 80vw;
+    margin-top: 40px;
+    margin-right: auto; /* Auto on left and right to center the main block */
+    margin-bottom: 40px;
+    margin-left: auto;
+
+    /*Shorthand -- Top&bottom -> left&right*/
+    margin: 40px auto;
+    /*Top -> Right -> Bottom -> Left*/
+    margin: 40px auto 40px auto;
+
+    border: 2px solid #0ABFBF;
+    border-radius: 10px;
+
+    padding: 10px;
+}
