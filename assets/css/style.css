@@ -1,4 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body{
     background-color: palevioletred;
     font-family: "Asmovian", serif;
+}
+
+header{
+}
+
+main{
+    margin: 40px auto;
 }
