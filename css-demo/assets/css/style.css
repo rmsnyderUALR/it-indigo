@@ -29,8 +29,6 @@ main{
     width: 80vw;
     max-width: 980px;
 
-    text-align: center;
-
     margin-top: 40px;
     margin-right: auto; /* Auto on left and right to center the main block */
     margin-bottom: 40px;
@@ -59,12 +57,41 @@ header.primary{
 
 div.hgroup{
     width: 70%;
+    text-align: left;
 }
-
-
 
 header.primary nav{
     width: 30%;
+}
+
+header.primary nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header.primary nav ul li a{
+    color: #ffffff;
+    background: rgba(0, 0, 0, .4);
+
+    display: block;
+    margin-bottom:10px;
+    border: 1px solid #cc3a67;
+    border-right: 10px solid #cc3a67;
+    border-radius: 20px 0;
+    padding: 10px 10px 10px 0;
+
+    text-align:center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    transition: 0.5s;
+}
+
+
+header.primary nav ul li a:hover{
+    text-decoration: underline;
+    background: rgba(217, 103, 4, 1);
 }
 
 div.hgroup h1 a{
@@ -81,4 +108,16 @@ div.hgroup h2{
 
 .hgroup h1, .hgroup h2{
     margin: 0;
+}
+
+#content{
+    line-height: 1.4;
+
+}
+
+#content h2, #content h3{
+    color: #D96704;
+    border-left: 7.5px solid #8C2703;
+    border-radius: 15px 0;
+    padding-left: 7.5px;
 }
