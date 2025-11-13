@@ -12,6 +12,10 @@ html {
     box-sizing: inherit;
 }
 
+/* ------------Responsive Image -------------- */
+img{
+    max-width: 100%;
+}
 /* ------------Utility Classes -------------- */
 
 .container{
@@ -39,7 +43,7 @@ main{
     /*Top -> Right -> Bottom -> Left*/
     margin: 40px auto 40px auto;
 
-    border: 2px solid #0ABFBF;
+    border: 3px solid #8C2703;
     border-radius: 10px;
 
 }
@@ -51,7 +55,6 @@ header.primary{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: 3px solid #D96704;
     display: flex;
 }
 
@@ -115,9 +118,68 @@ div.hgroup h2{
 
 }
 
-#content h2, #content h3{
+#content h2, #content h3, aside .container h2{
     color: #D96704;
     border-left: 7.5px solid #8C2703;
     border-radius: 15px 0;
     padding-left: 7.5px;
+}
+
+#blog{
+    background-color: #F2CDA0;
+    padding: 20px 0;
+    border-top: 6px double #0a96a6;
+    border-bottom: 6px double #0a96a6;
+}
+
+#blog > h2{
+    color: #ffffff;
+    text-shadow: 2px 2px #000;
+    margin-left: 20px;
+}
+
+#blog .post{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "figure header"
+    "figure post-content"
+    "figure footer";
+
+    margin: 20px;
+    padding: 10px;
+
+    background: #F2A950;
+}
+
+.post figure{
+    grid-area: figure;
+    margin: 0 20px 0 0;
+}
+
+.post header{
+    grid-area: header;
+}
+
+.post .post-content{
+    grid-area: post-content;
+}
+
+.post .post-meta{
+    grid-area: footer;
+}
+
+aside .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+#colophon{
+    background-image: url("../img/bg_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1px;
+    text-align: center;
+    color: #fff;
 }
