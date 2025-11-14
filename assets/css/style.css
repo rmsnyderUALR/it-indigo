@@ -39,7 +39,7 @@ nav ul{
     margin-bottom: 0;    
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     list-style: none;
     font-family: "Montserrat", sans-serif;
@@ -47,8 +47,9 @@ nav ul{
     font-weight: bold;
 }
 
-nav li{
+nav ul li{
     color: #3F1F20;
+    padding: 10px;
 }
 
 nav a{
