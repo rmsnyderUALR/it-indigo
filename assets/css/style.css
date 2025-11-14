@@ -23,6 +23,7 @@ header.primary{
     display: flex;
     flex-direction: column;
     padding: 0px 0px 0px 0px;
+    border-radius: 10px;
 }
 
 header h1{
@@ -60,7 +61,7 @@ main{
     width: 80vw;
     max-width: 980px;
     background-color: #3F1F20;
-
+    border-radius: 10px;
     text-align: center;
 }
 
