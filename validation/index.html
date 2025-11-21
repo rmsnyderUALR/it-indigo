@@ -9,42 +9,61 @@
 <body>
     <h1>New Patient Registration</h1>
     <h3>Please fill out the form below</h3>
-    <form action="https://brucebauer.info/assets/ITEC3650/datadump.php">
+    <form id="npr" action="https://brucebauer.info/assets/ITEC3650/datadump.php">
         <div class="container">
             <label for="fname" class="formlabel">First name:</label>
-            <input type="text" id="fname" name="FirstName" size="30" maxlength="30"><br>
+            <input type="text" id="fname" name="FirstName" size="30" maxlength="30" 
+            data-rule-required="true"  data-msg-required="First Name is Required" ><br>
 
             <label for="minitial" class="formlabel">Middle Initial:</label>
             <input type="text" id="minitial" name="MiddleInitial" size="1" maxlength="1"><br>
 
             <label for="lname" class="formlabel">Last name:</label>
-            <input type="text" id="lname" name="LastName" size="30" maxlength="30"><br>
+            <input type="text" id="lname" name="LastName" size="30" maxlength="30" 
+            data-rule-required="true"  data-msg-required="Last Name is Required"><br>
 
             <label for="email" class="formlabel">Email:</label>
-            <input type="email" id="email" name="Email" size="30" maxlength="30"><br>
+            <input type="email" id="email" name="Email" size="30" maxlength="30" 
+            data-rule-required="true"  data-msg-required="Email is Required" 
+            data-rule-email="true" data-msg-email="Invalid Email"><br>
 
             <label class="formlabel">Sex: </label>
-            <label for="male"><input type="radio" name="Sex" id="male" value="M">Male</label>
+            <label for="male"><input type="radio" name="Sex" id="male" value="M" 
+            data-rule-required="true" data-msg-required="Selection is Required">Male</label>
             <label for="female"><input type="radio" name="Sex" id="female" value="F">Female</label>
-            <label for="NA"><input type="radio" name="Sex" id="NA" value="N">N/A</label><br>
+            <label for="NA"><input type="radio" name="Sex" id="NA" value="N">N/A</label>
+            <label for="Sex" class="error" style="display:none;"></label><br>
 
             <label for="birthday" class="formlabel">Birthday: </label>
-            <input type="text" id="birthday" name="Birthday" size="8" maxlength="8"><br>
+            <input type="text" id="birthday" name="Birthday" size="8" maxlength="8" 
+            data-rule-required="true"  data-msg-required="Birthday is Required" 
+            data-rule-date="true" data-msg-date="Date must be MM/DD/YYYY format"><br>
 
             <label for="height" class="formlabel">Height (inches): </label>
-            <input type="text" id="height" name="Height" size="3" maxlength="3"><br>
+            <input type="text" id="height" name="Height" size="3" maxlength="3" 
+            data-rule-required="true"  data-msg-required="Height is Required" 
+            data-rule-number="true" data-msg-number="Height must be a number in inches"
+            data-rule-min="18" data-msg-min="Height must be greater than or equal to 12 inches"
+            data-rule-max="65" data-msg-max="Height must be less than or equal to 120 inches"><br>
 
             <label for="weight" class="formlabel">Weight (pounds): </label>
-            <input type="text" id="weight" name="Weight" size="3" maxlength="3"><br>
+            <input type="text" id="weight" name="Weight" size="3" maxlength="3" 
+            data-rule-required="true"  data-msg-required="Weight is Required" 
+            data-rule-number="true" data-msg-number="Weight must be a number in pounds"
+            data-rule-min="18" data-msg-min="Weight must be greater than or equal to 10 pounds"
+            data-rule-max="65" data-msg-max="Weight must be less than or equal to 500 pounds"><br>
         </div>
 
         <div class="container">
             <label for="pnumber" class="formlabel">Phone Number: </label>
-            <input type="tel" id="pnumber" name="PhoneNumber" size="14" maxlength="14" placeholder="123-456-7890"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            <input type="tel" id="pnumber" name="PhoneNumber" size="14" maxlength="14" 
+            placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+            data-rule-required="true"  data-msg-required="Phone number is Required"
+            data-rule-phoneUS="true" data-msg-phoneUS="Invalid Phone Number"><br>
 
             <label class="formlabel">Marital Status: </label>
-            <select name="MaritalStatus" id="mstatus">
+            <select name="MaritalStatus" id="mstatus"
+            data-rule-required="true"  data-msg-required="Marital status is Required">
                 <option value="">Select a Status...</option>
                 <option value="S">Single</option>
                 <option value="M">Married</option>
@@ -54,12 +73,15 @@
             </select><br>
 
             <label for="address" class="formlabel">Address: </label>
-            <input type="text" id="address" name="Address" size="30" maxlength="30"><br>
+            <input type="text" id="address" name="Address" size="30" maxlength="30"
+            data-rule-required="true"  data-msg-required="Address is Required"><br>
 
             <label for="city" class="formlabel">City/State/Zip: </label>
-            <input type="text" id="city" name="City" size="30" maxlength="30">
+            <input type="text" id="city" name="City" size="30" maxlength="30"
+            data-rule-required="true"  data-msg-required="City is Required">
             <label for="state">, </label>
-            <select name="State" id="state">
+            <select name="State" id="state"
+            data-rule-required="true"  data-msg-required="State is Required">
                 <option value="">Select a State...</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -114,13 +136,16 @@
                 <option value="WY">Wyoming</option>
             </select>
             <label for="zip"> </label>
-            <input type="text" id="zip" name="Zip" size="5" maxlength="5"><br>
+            <input type="text" id="zip" name="Zip" size="5" maxlength="5"
+            data-rule-required="true"  data-msg-required="Zip is Required"
+            data-rule-max="10" data-msg-max="You must enter 5 digits"><br>
         </div>
 
         <div class="container">
             <label class="formlabel">Taking Medications: </label>
-            <label for="yes"><input type="radio" name="Medications" id="yes" value="Y">Yes</label>
-            <label for="no"><input type="radio" name="Medications" id="no" value="N">No</label><br>
+            <label for="yes"><input type="radio" class="error" name="Medications" id="yes" value="Y" data-rule-required="true"  data-msg-required="Selection is Required">Yes</label>
+            <label for="no"><input type="radio" class="error" name="Medications" id="no" value="N">No</label>
+            <label for="Medications" class="error" style="display:none;"></label><br>
 
             <label for="meds" class="formlabel">Medications: </label>
             <textarea id="meds" name="MedicationsList" placeholder="Enter medications..." rows="3"
@@ -129,6 +154,15 @@
 
         <br><input type="submit" value="Submit Patient Form">
     </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script> // Empty Validator
+    $( "#npr" ).validate({
+
+    });                    
+    </script>
 </body>
 
 </html>
