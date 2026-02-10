@@ -25,6 +25,7 @@
       max-width: 80vw;
       margin: 20px auto;
 
+      /* grid-template-columns: repeat(4, 1fr); <----- unsure if this is necessary */
       grid-template-areas:
                       "header header header header"
                       "aside content content content"
