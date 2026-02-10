@@ -24,12 +24,11 @@
       gap: 20px;
       max-width: 80vw;
       margin: 20px auto;
-
-      grid: [row1-start] "header header header" 1fr [row1-end]
-        /*[row2-start] "content blog" 25px [row2-end]
-        /*[row3-start] "aside" 1fr [row3-end]
-        /*[row4-start] "footer" 2px [row4-end]*/
-        / auto 50px auto;
+      grid-template-areas:
+                      "header header header header header header"
+                      "content content content blog blog blog"
+                      "aside aside aside aside aside aside"
+                      "footer footer footer footer footer footer";
     }
 
    header.primary{
