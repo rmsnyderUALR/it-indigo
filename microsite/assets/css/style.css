@@ -1,0 +1,66 @@
+/* Color Palette:
+#637840 (Green)
+#E57235 (Orange)
+#99BB3D (Light Green)
+#EbE6DC (Off-White)
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ------------Responsive Image -------------- */
+img{
+    max-width: 100%;
+}
+/* ------------Utility Classes -------------- */
+
+.container{
+    margin: auto;
+    padding: 40px;
+}
+
+
+
+/* ------------Style Classes -------------- */
+
+body{
+    background-color: #637840;
+    font-family: "Josefin Sans", monospace;
+}
+
+main{
+    background-color: #EbE6DC;
+    width: 80vw;
+    max-width: 980px;
+    margin: 40px auto 40px auto;
+    border: 3px solid #E57235;
+    border-radius: 10px;
+}
+
+header.primary{
+    display: flex;
+    padding: 20px;
+}
+
+div.hgroup{
+}
+
+div.hgroup h1 a{
+    text-decoration: none;
+}
+
+div.hgroup img{
+    width: 20%;
+}
+
+header.primary nav{
+}
+
+header.primary nav ul{
+    display: flex;
+    flex-direction: row;
+}
