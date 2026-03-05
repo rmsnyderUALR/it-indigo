@@ -43,24 +43,33 @@ main{
 
 header.primary{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 20px;
+    border-bottom: 3px solid #99BB3D;
 }
 
+header img{
+    width: 20%;
+    align-self: center;
+}
 div.hgroup{
+    text-align: center;
 }
 
 div.hgroup h1 a{
     text-decoration: none;
 }
 
-div.hgroup img{
-    width: 20%;
-}
 
 header.primary nav{
+    width: 100%;
 }
 
 header.primary nav ul{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
 }
