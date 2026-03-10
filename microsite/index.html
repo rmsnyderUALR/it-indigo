@@ -11,17 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <meta name="robots" content="noindex">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 </head>
 
 <body>
   <main>
-    <header role="banner" class="primary">
-      <img src="assets/img/root_logo.webp" alt="Root Cafe Logo">
+    <header role="banner" class="primary" id="header">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/root_logo.webp" alt="Root Cafe Logo"></a>
+      </div>
       <div class="hgroup">
         <h1><a href="index.html">What's For Dinner?</a></h1>
         <h2>Staff Meal Made Simple</h2>
       </div>
-      <nav role="navigation">
+      <nav role="navigation" id="navbar" class="nav">
         <ul>
           <li><a href="index.html">Home Page</a></li>
           <li><a href="food.html">Recipes + Ingredients</a></li>
@@ -99,6 +104,7 @@
       <h6>&copy; 2026 Ryan Snyder</h6>
     </footer>
   </main>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
