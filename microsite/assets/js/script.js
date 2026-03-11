@@ -1,5 +1,5 @@
 // Changes navbar once scrolled past header
-var headerBottom = $('#header').offset().top + ($('#header').height()*2.2);
+var headerBottom = $('#header').offset().top + $('#header').height();
 
 $(window).on('scroll',function(){
 
