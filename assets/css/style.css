@@ -5,7 +5,13 @@
 #A9794A (Tan)
 #8D3A1C (Sienna)
 */
-
+:root{
+    --main-bg-color: #CB674C;
+    --assignment-color:#DBD7D3;
+    --text-color: #CB674C;
+    --default-spacing: 20px;
+    --secondary-color: #6C95B0;
+}
 html {
     box-sizing: border-box;
 }
@@ -17,48 +23,9 @@ html {
 }
 
 body {
-    background-color: #A2BC99;
-}
-
-header.primary {
-    background-color: #8D3A1C;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 0px 0px 0px;
-    border-radius: 10px;
-}
-
-header h1 {
+    background-color: var(--main-bg-color);
     font-family: "Bebas Neue", sans-serif;
-    font-size: 52px;
-    color: #1F0C0D;
-}
-
-
-nav ul {
-    background-color: #A9794A;
-
-    margin-bottom: 0;
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    list-style: none;
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li {
-    color: #3F1F20;
-    padding: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #3F1F20;
+    overflow: auto;
 }
 
 main {
@@ -70,32 +37,86 @@ main {
     text-align: center;
 }
 
+header.primary {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    border-radius: 10px;
+    h1{
+        font-size: 52px;
+        color: #1F0C0D;
+    }
+}
+
+nav {
+    ul{
+        background-color: var(--secondary-color);
+
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        list-style: none;
+        font-size: 18px;
+        font-weight: bold;
+        li{
+            color: #3F1F20;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: #3F1F20; 
+        }
+    } 
+}
+
 #content {
     color: #F2F0EF;
     padding: 40px;
+    background-color: var(--secondary-color);
+}
+
+div.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--default-spacing);
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+}
+
+.assignment{
+    border-radius: 3px;
+    background-color: var(--assignment-color);
+    padding: var(--default-spacing);
+    border-radius: var(--default-spacing);
+    text-align: center;
+    align-content: center;
+
+    > h2{
+        text-decoration: none;
+    }
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #04AA6D;
-    color: #3F1F20;
+    background-color: var(--assignment-color);
+    color: var(--text-color);
     padding: 16px;
     font-size: 16px;
     border: none;
     border-radius: 10px;
     list-style: none;
-    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: bold;
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.subDropDown {
     position: relative;
     display: inline-block;
 }
@@ -109,7 +130,6 @@ main {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -128,10 +148,7 @@ main {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-#subdrop:hover .dropdown-content {
-    display: block;
-}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #bdbab7;
 }
