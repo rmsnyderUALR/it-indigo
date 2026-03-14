@@ -21,7 +21,7 @@ img{
 .container{
     margin: auto;
     padding: 40px;
-    max-width: 70%;
+    max-width: 80%;
 }
 
 
@@ -155,11 +155,13 @@ div.hgroup{
     }
     figure{
         img{
-            width: 20vw;
+            width: 100%;
             height: auto;
+            border-radius: 20px;
         }
         figcaption{
             text-align: center;
+            display: none;
         }
     }
     footer{
@@ -170,6 +172,11 @@ div.hgroup{
                 color: #99BB3D;
             }
         }
+    }
+    .post{
+        background-color: #ccc6b9;
+        padding: 20px;
+        border-radius: 20px;
     }
 }
 
@@ -197,4 +204,10 @@ aside{
 #colophon{
     background-color: #637840;
     padding: 1px 0 0 20px;
+    text-align: center;
+    font-size: 0.7rem;
+    a{
+        color: #000;
+    }
+    
 }
