@@ -185,17 +185,46 @@ aside{
         max-width: 100%;
         background-color: rgba(229, 114, 53, 0.9);
         display: grid;
-        grid-template-areas: 
-                "article article";
+        grid-template-columns: repeat(4, 1fr);
+        padding: 20px 200px 20px 200px;
     }
-    p{
-        font-size: 1.4rem;
-        text-wrap: wrap balance;
-        a{
-            color: #637840;
-            text-decoration: none;
-            &:hover{
-                color: #99BB3D;
+    article{
+        h2{
+            text-transform:uppercase;
+        }
+        ul{
+            list-style: none;
+            padding: 1px;
+            margin: 1px;
+            font-size: 0.8rem;
+            li{
+                margin-top: 4px;
+                a{
+                    color: #637840;
+                    &:hover{
+                        color: #99BB3D;
+                    }
+                }
+            }
+            &#contact{
+                li{
+                    display: flex;
+                    a{
+                        &.fa{
+                            margin-left: 6px;
+                            text-decoration: none;
+                            font-size: 18px;
+                            text-align: center;
+                        }
+                        &:hover{
+                            color: #99BB3D;
+                        }
+                    }
+                }
+            }
+            h4{
+                margin: 6px 0px 2px 0px;
+                padding: 0;
             }
         }
     }
