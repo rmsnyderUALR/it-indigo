@@ -178,10 +178,9 @@ div.hgroup{
         }
     }
     .post{
-        background-color: #fff;
+        background-color: #ccc6b9;
         padding: 20px;
         border-radius: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 }
 

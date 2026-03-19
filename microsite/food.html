@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/food.css">
   <meta name="robots" content="noindex">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
@@ -37,65 +37,122 @@
     <section id="content" class="container">
       <h2>Food page</h2>
       <h3>Local Food</h3>
-      <p>The Root Cafe is a farm-to-table restaurant located in downtown Little Rock. This means that nearly all of the ingredients used for the menu are obtained from local farms and businesses. </p>
-      <p>This site was made to help determine what to cook for staff meal each night. I am the dinner lead so it falls to me to make sure my staff is fed and ready to work hard. I usually spend a lot of time deciding what to make because I care about making sure everyone's preferences and restrictions are accomodated as well as making a delicious meal. This site should shorten this decision making process drastically.</p>
+      <p>The Root Cafe is a farm-to-table restaurant located in downtown Little Rock. This means that nearly all of the ingredients used for the menu are obtained from local farms and businesses. </p><br>
+      <h3>Recipes</h3>
     </section>
-    <section id="articles" class="container">
-      <article class="post">
+    <section id="recipes" class="container recipe-grid">
+      <div class="recipe-card">
         <header>
           <figure>
-            <img src="assets/img/burgers.jpg" alt="Burgers cooking on a flat top grill" >
-            <figcaption>Burgers</figcaption>
+            <img src="assets/img/miso.jpg" alt="Miso soup in a bowl" >
+            <figcaption>Miso Soup</figcaption>
           </figure>
-          <h2> <a href="#" rel="bookmark" title="link to this post">The Art Of Burger Making</a> </h2>
+          <h2> <a href="https://www.justonecookbook.com/homemade-miso-soup/" rel="bookmark" title="link to this recipe">Miso Soup</a> </h2>
         </header>
-        <p>Learn how to make restaurant quality burgers in the comfort of your own home. Learn where to find the freshest ingredients and how to transform them into the burger of your dreams.
-        </p>
-        <footer class="post-meta"> Posted by <a href="#">Chef Root</a></footer>
-      </article>
-
-      <article class="post">
+        <p>A simple miso soup made with tofu and available vegetables</p>
+      </div>
+      <div class="recipe-card">
         <header>
           <figure>
-            <img src="assets/img/staff-work.jpg" alt="restaurant staff at work" >
-            <figcaption>Staff at work</figcaption>
+            <img src="assets/img/mash-soup.jpg" alt="Mashed potato soup topped with cheese and bacon" >
+            <figcaption>Mash potato soup</figcaption>
           </figure>
-          <h2> <a href="#" rel="bookmark" title="link to this post">A Look Behind The Scenes</a> </h2>
+          <h2> <a href="https://www.katiescucina.com/mashed-potato-soup/" rel="bookmark" title="link to this recipe">Mash Potato Soup</a> </h2>
         </header>
-        <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
-        </p>
-        <footer class="post-meta"> Posted by <a href="#">Chef Root</a></footer>
-      </article>
-      <article class="post">
+        <p>Soup made with leftover mashed potatoes topped with cheddar cheese, fried ham, and chives</p>
+      </div>
+      <div class="recipe-card">
         <header>
           <figure>
-            <img src="assets/img/staff.webp" alt="restaurant staff eating staff meal" >
-            <figcaption>Staff eating</figcaption>
+            <img src="assets/img/fried-rice.jpg" alt="Fried rice in a bowl" >
+            <figcaption>Fried Rice</figcaption>
           </figure>
-          <h2> <a href="#" rel="bookmark" title="link to this post">Why Is Staff Meal So Important?</a> </h2>
+          <h2> <a href="https://www.gimmesomeoven.com/fried-rice-recipe/#tasty-recipes-62154-jump-target" rel="bookmark" title="link to this recipe">Fried Rice</a> </h2>
         </header>
-        <p>Curabitur facilisis pharetra ultrices. Phasellus eu elementum felis. Etiam cursus mi vitae odio imperdiet, vel fringilla orci porttitor. Cras at tincidunt metus, in lobortis ligula. Fusce metus nisl, efficitur id fringilla quis, luctus non nisi.
-        </p>
-        <footer class="post-meta"> Posted by <a href="#">Chef Root</a></footer>
-      </article>
+        <p>Fried rice made with available vegetables and ground beef or tofu.</p>
+      </div>
+      <div class="recipe-card">
+        <header>
+          <figure>
+            <img src="assets/img/beefy-mac.jpg" alt="Beefy macaroni and cheese in a skillet" >
+            <figcaption>Beefy Macaroni</figcaption>
+          </figure>
+          <h2> <a href="https://mykitchenserenity.com/mac-and-cheese-with-meat/" rel="bookmark" title="link to this recipe">Beefy Mac</a> </h2>
+        </header>
+        <p>Made with leftover mac-and-cheese and ground beef</p>
+      </div>
+      <div class="recipe-card">
+        <header>
+          <figure>
+            <img src="assets/img/spaghetti.jpg" alt="Spaghetti on a plate with a fork twirled for a bite" >
+            <figcaption>Spaghetti</figcaption>
+          </figure>
+          <h2> <a href="hhttps://ifoodreal.com/spaghetti-with-tomato-sauce-recipe/" rel="bookmark" title="link to this recipe">Spaghetti</a> </h2>
+        </header>
+        <p>A simple spaghetti made with tomato sauce, parmesean cheese, and available herbs</p>
+      </div>
+      <div class="recipe-card">
+        <header>
+          <figure>
+            <img src="assets/img/pasta.jpg" alt="Sausage pasta in a skillet" >
+            <figcaption>Creamy Sausage Pasta</figcaption>
+          </figure>
+          <h2> <a href="https://thesaltymarshmallow.com/creamy-italian-sausage-pasta/" rel="bookmark" title="link to this recipe">Creamy Sausage Pasta</a> </h2>
+        </header>
+        <p>Made using leftover sausage, creamy, parmesean, and available pasta</p>
+      </div>
     </section>
     <aside>
       <div class="container">
         <article class="widget">
           <header>
-            <h2>Sample Sidebar Item </h2>
+            <h2>Hours</h2>
           </header>
-          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
-            Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
-          <footer>Widget Footer</footer>
+          <ul>
+            <li>MONDAY: CLOSED</li>
+            <li>TUESDAY: 8AM - 8PM</li>
+            <li>WEDNESDAY: 8AM - 8PM</li>
+            <li>THURSDAY: 8AM - 8PM</li>
+            <li>FRIDAY: 8AM - 8PM</li>
+            <li>SATURDAY: 8AM - 8PM</li>
+            <li>SUNDAY: 8AM - 8PM</li>
+          </ul>
         </article>
         <article class="widget">
           <header>
-            <h2>Sample Sidebar Item </h2>
+            <h2>Locations</h2>
           </header>
-          <p>Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula. Phasellus et elit purus. Curabitur ipsum enim, scelerisque vitae condimentum ac, cursus eget quam. Nullam volutpat dui ut risus pulvinar at fringilla sem tristique. Nulla facilisi.
-            Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
-          <footer>Widget Footer</footer>
+          <ul>
+            <li><strong>Location 1: Soma</strong><br>Downtown Little Rock<br>1500 S Main St<br>Little Rock, AR 72202<br><br></li>
+            <li><strong>Location 2: Breckenridge</strong><br>West Little Rock<br>10301 N Rodney Parham Rd, Ste. C3-4<br>Little Rock, AR72227</li>
+          </ul>
+        </article>
+        <article class="widget">
+          <header>
+            <h2>Affiliates</h2>
+          </header>
+          <ul>
+            <li>Local Supplier</li>
+            <li>Local Supplier</li>
+            <li>Local Supplier</li>
+            <li>Local Supplier</li>
+            <li>Local Supplier</li>
+          </ul>
+        </article>
+        <article class="widget">
+          <header>
+            <h2>Contact</h2>
+          </header>
+          <ul id="contact">
+            <li>Phone: (501) 414-0423</li>
+            <li>Email: &nbsp;<a href="mailto:theroot@therootcafe.com">theroot@therootcafe.com</a></li>
+            <h4>Social Media</h4>
+            <li>Facebook<a href="#" class="fa fa-facebook"></a></li>
+            <li>Instagram<a href="#" class="fa fa-instagram"></a></li>
+            <li>Twitter<a href="#" class="fa fa-twitter"></a></li>
+            <h4>Catering</h4>
+            <li><a href="mailto:catering@therootcafe.com">catering@therootcafe.com</a></li>
+          </ul>
         </article>
       </div>
     </aside>
