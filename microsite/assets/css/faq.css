@@ -190,7 +190,7 @@ aside{
         background-color: rgba(229, 114, 53, 0.9);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding: 20px 200px 20px 200px;
+        padding: 20px 100px 20px 100px;
     }
     article{
         h2{
