@@ -4,6 +4,12 @@
 #99BB3D (Light Green)
 #EbE6DC (Off-White)
 */
+:root{
+    --primary-color: #637840;
+    --secondary-color: #E57235;
+    --tertiary-color: #99BB3D;
+    --offwhite: #EbE6DC;
+}
 
 html {
     box-sizing: border-box;
@@ -29,13 +35,13 @@ img{
 /* ------------Style Classes -------------- */
 
 body{
-    background-color: #637840;
+    background-color: var(--primary-color);
     font-family: "Josefin Sans", monospace;
     margin: 0;
 }
 
 main{
-    background-color: #EbE6DC;
+    background-color: var(--offwhite);
     max-width: 100%;
     border-radius: 10px;
 }
@@ -69,13 +75,13 @@ div.hgroup{
     margin-top: 20px;
     align-self: center;
     text-align: center;
-    color: white;
+    color: var(--offwhite);
     h1{
         margin-bottom: 0;
         text-shadow: 2px 4px  black;
         a{
             text-decoration: none;
-            color: white;
+            color: var(--offwhite);
             text-wrap: nowrap;
             font-size: 3.5rem;
         }
@@ -103,27 +109,30 @@ div.hgroup{
         padding-right: 30px;
         li a{
             text-decoration: none;
-            color: white;
+            color: var(--offwhite);
             display: inline-block;
             position: relative;
             padding: 0.8em;
             &:hover{
-                color: rgba(229, 114, 53, 1);
+                color: var(--secondary-color);
             }
         }
     }
 }
 
 #navbar.past-header{
+    background-color: var(--offwhite);
+    ul{
+        margin: 20px 0 0 0;
+    }
     li{
        a{
-            color: rgba(229, 114, 53, 1);
+            color: var(--secondary-color);
             &:hover{
-                color: #fff;
+                color: #000;
             }
         }
-    }
-    
+    } 
 }
 
 #content{
@@ -131,15 +140,15 @@ div.hgroup{
     h3{
         font-size: 2rem;
         text-align: center;
-        color: #637840;
+        color: var(--primary-color);
     }
-    p{
+    h4{
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
-#articles{
+/* #articles{
     display: grid;
     gap: 50px;
     grid-template-areas:
@@ -150,9 +159,9 @@ div.hgroup{
         padding-top: 20px;
         a{
             text-decoration: none;
-            color: #637840;
+            color: var(--primary-color);
             &:hover{
-                color: #99BB3D;
+                color: var(--tertiary-color);
             }
         }
         
@@ -170,10 +179,10 @@ div.hgroup{
     }
     footer{
         a{
-            color: #637840;
+            color: var(--primary-color);
             text-decoration: none;
             &:hover{
-                color: #99BB3D;
+                color: var(--tertiary-color);
             }
         }
     }
@@ -182,12 +191,14 @@ div.hgroup{
         padding: 20px;
         border-radius: 20px;
     }
-}
+} */
 
 aside{
     .container{
         max-width: 100%;
-        background-color: rgba(229, 114, 53, 0.9);
+        /* background-color: rgba(229, 114, 53, 0.9); */
+        background-color: var(--primary-color);
+        color: var(--offwhite);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 20px 100px 20px 100px;
@@ -195,6 +206,7 @@ aside{
     article{
         h2{
             text-transform:uppercase;
+            color: var(--secondary-color);
         }
         ul{
             list-style: none;
@@ -202,12 +214,9 @@ aside{
             margin: 1px;
             font-size: 0.8rem;
             li{
-                margin-top: 4px;
+                margin-top: 6px;
                 a{
-                    color: #637840;
-                    &:hover{
-                        color: #99BB3D;
-                    }
+                    color: var(--offwhite);
                 }
             }
             &#contact{
@@ -221,13 +230,14 @@ aside{
                             text-align: center;
                         }
                         &:hover{
-                            color: #99BB3D;
+                            color: var(--secondary-color);
                         }
                     }
                 }
             }
-            h4{
-                margin: 6px 0px 2px 0px;
+            h3{
+                font-size: 1rem;
+                margin: 6px 0px 8px 0px;
                 padding: 0;
             }
         }
@@ -235,12 +245,19 @@ aside{
 }
 
 #colophon{
-    background-color: rgba(229, 114, 53, 0.9);
+    /* background-color: rgba(229, 114, 53, 0.9); */
+    background-color: var(--primary-color);
     padding: 1px 0 1px 20px;
+    /* border-top: 1px solid #000; */
     text-align: center;
     font-size: 0.7rem;
+    color: var(--offwhite);
     a{
-        color: #000;
+        /* color: #000; */
+        color: var(--offwhite);
+        &:hover{
+            color: var(--secondary-color);
+        }
     }
     
 }
