@@ -14,8 +14,8 @@
         <div class="formcontainer">
             <h2>Currency Value History</h2>
 
-            <label>Base Currency: </label>
-            <select name="selBaseCurrency" id="baseCurrency"                
+            <label class="formlabel" for="baseCurrency">Base Currency: </label>
+            <select name="baseCurrency" id="baseCurrency"                
                     data-rule-required="true" data-msg-required="Base Currency is Required">
                 <option value="">Select a Base Currency...</option>
                 <option value="USD">US Dollar</option>
@@ -24,19 +24,19 @@
                 <option value="GBP">British Pound Sterling</option>
                 <option value="CNY">Chinese Renminbi</option>
             </select>
-            <label for="selBaseCurrency" class="error"></label><br>
+            <label id="baseCurrencyError" for="baseCurrency" class="error"></label><br>
 
-            <label>Convert to Currency: </label>
-            <select name="selConvertCurrency" id="convertCurrency"                
+            <label class="formlabel" for="toCurrency">Convert to Currency: </label>
+            <select name="toCurrency" id="toCurrency"                
                     data-rule-required="true" data-msg-required="Convert to Currency is Required">
-                <option value="">Select a Base Currency...</option>
+                <option value="">Select a Currency to Convert to...</option>
                 <option value="USD">US Dollar</option>
                 <option value="EUR">Euro</option>
                 <option value="JPY">Japanese Yen</option>
                 <option value="GBP">British Pound Sterling</option>
                 <option value="CNY">Chinese Renminbi</option>
             </select>
-            <label for="selConvertCurrency" class="error"></label><br>
+            <label id="toCurrencyError" for="toCurrency" class="error"></label><br>
             
             <label for="FromDate" class="formlabel">From Date:</label>
             <input type="date" name="FromDate" id="FromDate" 
@@ -51,17 +51,6 @@
             <input type="submit" value="Show Results" id="showResults" name="showResults" onclick="convCurrency();">
             <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
         
-
-            <div class="clearfix">
-                <div class="img-container">
-                    <span id="StockValueTable"></span>
-                </div>
-                <div class="img-container">
-                    <span id="StockVolumeTable"></span>
-                </div>
-            </div>
-            <hr>
-            
             <div class="clearfix">
                 <div class="img-container">
                     <canvas id="chartjs-0" width="400" height="400"></canvas>
@@ -76,6 +65,6 @@
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="assets/js/convert.js"></script>
 </body>
 </html>

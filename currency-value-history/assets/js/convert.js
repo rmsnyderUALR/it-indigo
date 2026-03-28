@@ -8,28 +8,19 @@ async function convCurrency() {
     if (form.valid()) {
         
         let baseCurrency = document.getElementById("baseCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
         let apiKey = "uVFhJsaAtoeFUuK6ycmOUcClt9EsVaRD"
         let FromDate = document.getElementById("FromDate").value;
         let ToDate = document.getElementById("ToDate").value;
 
         /* URL for AJAX Call */
-        let myURL1 = "https://api.massive.com/v3/reference/dividends" + "?apiKey=" + apiKey;
+        let myURL1 = "https://api.massive.com/v3/reference/dividends" + baseCurrency + "?apiKey=" + apiKey;
         /* Make the AJAX call */
         let msg1Object = await fetch(myURL1);
         /* Check the status */
         if (msg1Object.status >= 200 && msg1Object.status <= 299) {            
             let msg1JSONText = await msg1Object.text();
             // Parse the JSON string into an object
-            let msg1 = JSON.parse(msg1JSONText);
-            /* Your code to process the result goes here - 
-               display the returned message */
-            document.getElementById("company").innerHTML = msg1.results.name;
-            document.getElementById("address").innerHTML = msg1.results.address.address1 + ", " + msg1.results.address.city + ", " 
-                + msg1.results.address.state + "   " + msg1.results.address.postal_code;
-            document.getElementById("employees").innerHTML = msg1.results.total_employees;
-            document.getElementById("description").innerHTML = msg1.results.sic_description;
-            document.getElementById("url").innerHTML = msg1.results.homepage_url;
-            document.getElementById("url").href = msg1.results.homepage_url;
         }
         else {
             /* AJAX complete with error - probably invalid stock ticker symbol */
@@ -69,25 +60,6 @@ async function convCurrency() {
                     }
                 }
 
-                let stockvaluetable = "";
-                if (numdays > 0) {
-                    stockvaluetable = stockvaluetable + "<table><caption>Stock Price</caption><tr><th>Date</th><th>Price</th></tr>";
-                    for (let i = 0; i < numdays; i++) {
-                        stockvaluetable = stockvaluetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvalue[i] + "</td></tr>";
-                    }
-                    stockvaluetable = stockvaluetable + "</table>"
-                    document.getElementById("StockValueTable").innerHTML = stockvaluetable;
-                }
-                
-                let stockvolumetable = "";
-                if (numdays > 0) {
-                    stockvolumetable = stockvolumetable + "<table><caption>Stock Volume</caption><tr><th>Date</th><th>Volume</th></tr>";
-                    for (let i = 0; i < numdays; i++) {
-                        stockvolumetable = stockvolumetable + "<tr><td>" + stockdate[i] + "</td><td>" + stockvolume[i] + "</td></tr>";
-                    }
-                    stockvolumetable = stockvolumetable + "</table>"
-                    document.getElementById("StockVolumeTable").innerHTML = stockvolumetable;
-                }
 
                 let ctx0 = document.getElementById("chartjs-0");
                 let myChart0 = new Chart(ctx0, {
@@ -104,25 +76,7 @@ async function convCurrency() {
                             maintainAspectRatio: true,
                         }
                     }
-                );
-                
-                let ctx1 = document.getElementById("chartjs-1");
-                let myChart1 = new Chart(ctx1, {
-                    "type":"line",
-                    "data": {
-                        "labels": stockdate,
-                        "datasets":[{"label":"Stock Volume",
-                        "data": stockvolume,
-                        "fill":false,
-                        "borderColor":"rgb(75, 192, 192)",
-                        "lineTension":0.1}]},
-                        "options":{ 
-                            responsive: false,
-                            maintainAspectRatio: true,
-                        }
-                    }
-                );
-            
+                );         
         }
         else {
             /* AJAX completed with error - probably invalid stock ticker symbol */
@@ -135,20 +89,16 @@ async function convCurrency() {
 function ClearForm() {
     "use strict;"
 
-    document.getElementById("StockSymbol").value = "";
-    document.getElementById("StockSymbolError").innerHTML = "";
+    document.getElementById("baseCurrency").value = "";
+    document.getElementById("baseCurrencyError").innerHTML = "";
+    document.getElementById("toCurrency").value = "";
+    document.getElementById("toCurrencyError").innerHTML = "";
     document.getElementById("FromDate").value = "";
     document.getElementById("FromDateError").innerHTML = "";
     document.getElementById("ToDate").value = "";
     document.getElementById("ToDateError").innerHTML = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("address").innerHTML = "";
-    document.getElementById("description").innerHTML = "";
-    document.getElementById("employees").innerHTML = "";
     document.getElementById("url").innerHTML = "";
     document.getElementById("url").href = "";
-    document.getElementById("StockValueTable").innerHTML = "";
-    document.getElementById("StockVolumeTable").innerHTML = "";
     
     /* Ugly Code to Erase Canvas */
     let canvas0 = document.getElementById("chartjs-0");
