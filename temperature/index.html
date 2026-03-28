@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Location Temperature">
+    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
+    <meta name="author" content="Ryan Snyder">
+    <title>Location Temperature</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+</head>
+
+<body>
+    <form id="myform">
+        <div class="formcontainer" onsubmit="return false">
+            <h1>Location Temperature</h1>
+            <fieldset id="detail">
+                <br>
+
+                <label class="formlabel" for="location">Enter Location: </label>
+                <input type="text" id="location" name="location"
+                data-rule-required="true" data-msg-required="Location is required">
+                <label class="error" for="location" id="locationError"></label>
+                <br><br>
+
+                <input type="submit" value="Display Temp" id="displayTemp" name="displayTemp" onclick="displayTemp();">
+                <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="clearform();">
+            </fieldset>    
+        </div>
+    </form>
+    <script src="assets/js/script.js"></script>
+</body>

@@ -101,6 +101,9 @@ div.container{
     > h2{
         text-decoration: none;
     }
+    a:hover{
+        color: #804434;
+    }
 }
 
 /* Dropdown Button */
