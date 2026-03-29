@@ -6,7 +6,7 @@
 #8D3A1C (Sienna)
 */
 :root{
-    --main-bg-color: #CB674C;
+    --main-bg-color: #b891a4;
     --assignment-color:#DBD7D3;
     --text-color: #CB674C;
     --default-spacing: 20px;
@@ -24,6 +24,8 @@ html {
 
 body {
     background-color: var(--main-bg-color);
+    background-image: url("../img/background.jpg");
+    background-size: cover;
     font-family: "Bebas Neue", sans-serif;
     overflow: auto;
 }
