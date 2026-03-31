@@ -8,28 +8,57 @@
     <meta name="author" content="Ryan Snyder">
     <title>Location Temperature</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 
 <body>
-    <form id="myform">
-        <div class="formcontainer" onsubmit="return false">
-            <h1>Location Temperature</h1>
-            <fieldset id="detail">
-                <br>
+    <main>
+        <form id="myform" onsubmit="return false">
+            <div class="formcontainer" >
+                <h1>Location Temperature</h1>
+                <fieldset id="detail">
+                    <br>
 
-                <label class="formlabel" for="location">Enter Location: </label>
-                <input type="text" id="location" name="location"
-                data-rule-required="true" data-msg-required="Location is required">
-                <label class="error" for="location" id="locationError"></label>
-                <br><br>
+                    <label class="formlabel" for="location">Enter Location: </label>
+                    <input type="text" id="location" name="location" value="Little Rock"
+                    data-rule-required="true" data-msg-required="Location is required">
+                    <label class="error" for="location" id="locationError"></label>
+                    <br><br>
 
-                <input type="submit" value="Display Temp" id="displayTemp" name="displayTemp" onclick="displayTemp();">
-                <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="clearform();">
-            </fieldset>    
-        </div>
-    </form>
+                    <input type="submit" value="Display Temp" id="displayTemp" name="displayTemp" onclick="getTemp();">
+                    <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="clearform();">
+                    <br>
+                    <br>
+                    <label class="formlabel" for="name">Location: </label>
+                    <span id="name"></span>
+                    <span id="admin1Location"></span>
+                    <span id="country"></span>
+                    <br>
+                    <label class="formlabel" for="latitude" id="latitude">Latitude = </label>
+                    <span id="latitude"></span> <br>
+                    <label class="formlabel" for="latitude" id="longitude">Longitude = </label>
+                    <span id="longitude"></span>
+                    <br>
+
+                </fieldset>
+                <div class="results">
+                    <div class="clearfix">
+                        <div class="img-container">
+                            <span id="weatherTable"></span>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="img-container">
+                            <canvas id="chartjs" width="500" height="500"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
     <script src="assets/js/script.js"></script>
 </body>

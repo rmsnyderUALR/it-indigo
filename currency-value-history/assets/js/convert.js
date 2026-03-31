@@ -64,13 +64,7 @@ async function convCurrency() {
         else {
             alert("No currency data found for that date range");
         }
-    }
-    else {
-            /* Your code to process the result goes here - 
-            display the returned message */
-        alert("Currency Not Found - Status: " + msg1Object.status);
-        return;
-    }        
+    }       
 }
 
 function ClearForm() {
@@ -84,11 +78,9 @@ function ClearForm() {
     document.getElementById("FromDateError").innerHTML = "";
     document.getElementById("ToDate").value = "";
     document.getElementById("ToDateError").innerHTML = "";
-    document.getElementById("url").innerHTML = "";
-    document.getElementById("url").href = "";
     
     /* Ugly Code to Erase Canvas */
-    let canvas0 = document.getElementById("chartjs-0");
+    let canvas0 = document.getElementById("chartjs");
     let context0 = canvas0.getContext('2d');    
     context0.clearRect(0, 0, canvas0.width, canvas0.height);
 }
