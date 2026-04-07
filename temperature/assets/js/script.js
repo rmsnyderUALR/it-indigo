@@ -1,7 +1,7 @@
 async function getTemp(){
     "use strict";
 
-     // Get a reference to the form - Use the ID of the form
+    // Get a reference to the form - Use the ID of the form
     let form = $("#myform");
 
     // If all of the form elements are valid, the get the form values
