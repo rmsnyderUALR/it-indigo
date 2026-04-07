@@ -82,7 +82,16 @@ async function getHeight(){
 function clearform(){
     "use strict;"
 
-    document.getElementById("id").innerHTML = "";
-    document.getElementById("heightValue").innerHTML = "";
-    document.getElementById("heightUnit").innerHTML = "";
+    document.getElementById("id0").innerHTML = "";
+    document.getElementById("heightValue0").innerHTML = "";
+    document.getElementById("heightUnit0").innerHTML = "";
+    document.getElementById("id1").innerHTML = "";
+    document.getElementById("heightValue1").innerHTML = "";
+    document.getElementById("heightUnit1").innerHTML = "";
+    document.getElementById("id2").innerHTML = "";
+    document.getElementById("heightValue2").innerHTML = "";
+    document.getElementById("heightUnit2").innerHTML = "";
+    document.getElementById("id3").innerHTML = "";
+    document.getElementById("heightValue3").innerHTML = "";
+    document.getElementById("heightUnit3").innerHTML = "";
 }
