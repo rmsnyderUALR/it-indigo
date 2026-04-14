@@ -89,7 +89,8 @@ async function getTemp(){
                         "color":"#000",
                         "pointRadius":2,
                         "pointBackgroundColor":"#fff",
-                        "lineTension":0.1}]},
+                        "lineTension":0.1
+                    }]},
                         "options":{
                             responsive: false,
                             mantainAspectRatio: true,

@@ -8,7 +8,8 @@ async function getHeight(){
     if (form.valid()){
 
         // URL for call
-        let url = "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous/items?f=json&lang=en-US&limit=10000&properties=monitoring_location_id,parameter_code,statistic_id,time,value,unit_of_measure&skipGeometry=true&offset=0&monitoring_location_id=USGS-07055646%2C%20USGS-07055660%2C%20USGS-07055680%2C%20USGS-07055780&parameter_code=00065&time=P7D";
+        // let url = "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous/items?f=json&lang=en-US&limit=10000&properties=monitoring_location_id,parameter_code,statistic_id,time,value,unit_of_measure&skipGeometry=true&offset=0&monitoring_location_id=USGS-07055646%2C%20USGS-07055660%2C%20USGS-07055680%2C%20USGS-07055780&parameter_code=00065&time=P7D";
+        let url = "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&lang=en-US&limit=10000&properties=monitoring_location_id,parameter_code,statistic_id,time,value,unit_of_measure&skipGeometry=true&offset=0&monitoring_location_id=USGS-07055660%2C%20USGS-07055646%2C%20USGS-07055680&parameter_code=00065&time=P7D"
 
         // Make call
         let msgObject = await fetch(url);
@@ -76,6 +77,135 @@ async function getHeight(){
                 return;
             }
         }
+
+        /* Site 1 */
+        /* Information about the PID */
+        var sitename = "Ponca"
+        var sitecode = "USGS-07055660"
+        var siteDescription = "Ponca Bridge"
+
+        /* Holds the dates and values to be graphed */
+        var dates = [];
+        var values = [];
+
+        /* fLen contains the length of the array (number of values) */
+        var fLen = msg.features.length
+        for (var i = 0; i < fLen; i++) {
+            if (msg.features[i].properties.monitoring_location_id == sitecode) {
+                // values.push(msg.features[i].properties.value);
+                // dates.push(msg.features[i].properties.time);
+                values[i] = msg.features[i].properties.value;
+                dates[i] = msg.features[i].properties.time;
+            }
+        }
+        /* Put your code here to display a graph of values and dates for Site 1*/
+
+        var ctx = document.getElementById("chartjs-0");
+        var myChart = new Chart(ctx, {
+            "type":"line",
+            "data": {
+                "labels": dates,
+                "datasets":
+                [{"label":"River Height",
+                    "data": values,
+                    "fill": false,
+                    "borderColor":"#228B22",
+                    "color":"#000",
+                    "pointRadius":1,
+                    "pointBackgroundColor":"#fff",
+                    "lineTension":0.1
+                }]},
+            "options":{ 
+                responsive: false,
+                maintainAspectRatio: true,
+            }
+        });
+
+        /* Site 2 */
+        /* Information about the PID */
+        var sitename = "Boxley"
+        var sitecode = "USGS-07055646"
+        var siteDescription = "Near Boxley"
+
+        /* Holds the dates and values to be graphed */
+        var dates2 = [];
+        var values2 = [];
+
+        /* fLen contains the length of the array (number of values) */
+        var fLen = msg.features.length
+        for (var i = 0; i < fLen; i++) {
+            if (msg.features[i].properties.monitoring_location_id == sitecode) {
+                // values.push(msg.features[i].properties.value);
+                // dates.push(msg.features[i].properties.time);
+                values2[i] = msg.features[i].properties.value;
+                dates2[i] = msg.features[i].properties.time;
+            }
+        }
+        /* Put your code here to display a graph of values and dates for Site 2*/
+
+        var ctx = document.getElementById("chartjs-1");
+        var myChart = new Chart(ctx, {
+            "type":"line",
+            "data": {
+                "labels": dates2,
+                "datasets":
+                [{"label":"River Height",
+                    "data": values2,
+                    "fill": false,
+                    "borderColor":"#228B22",
+                    "color":"#000",
+                    "pointRadius":1,
+                    "pointBackgroundColor":"#fff",
+                    "lineTension":0.1
+                }]},
+            "options":{ 
+                responsive: false,
+                maintainAspectRatio: true,
+            }
+        });
+
+        /* Site 3 */
+        /* Information about the PID */
+        var sitename = "Pruitt"
+        var sitecode = "USGS-07055680"
+        var siteDescription = "Pruitt"
+
+        /* Holds the dates and values to be graphed */
+        var dates3 = [];
+        var values3 = [];
+
+        /* fLen contains the length of the array (number of values) */
+        var fLen = msg.features.length
+        for (var i = 0; i < fLen; i++) {
+            if (msg.features[i].properties.monitoring_location_id == sitecode) {
+                // values.push(msg.features[i].properties.value);
+                // dates.push(msg.features[i].properties.time);
+                values3[i] = msg.features[i].properties.value;
+                dates3[i] = msg.features[i].properties.time;
+            }
+        }
+        /* Put your code here to display a graph of values and dates for Site 3*/
+
+        var ctx = document.getElementById("chartjs-2");
+        var myChart = new Chart(ctx, {
+            "type":"line",
+            "data": {
+                "labels": dates3,
+                "datasets":
+                [{"label":"River Height",
+                    "data": values3,
+                    "fill": false,
+                    "borderColor":"#228B22",
+                    "color":"#000",
+                    "pointRadius":1,
+                    "pointBackgroundColor":"#fff",
+                    "lineTension":0.1
+                }]},
+            "options":{ 
+                responsive: false,
+                maintainAspectRatio: true,
+            }
+        });
     }
 }
 

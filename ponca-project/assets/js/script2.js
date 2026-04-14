@@ -20,7 +20,7 @@ async function GetData() {
     var msgObject = await fetch(myURL);
     var msgJSONText = await msgObject.text();
     var msg = JSON.parse(msgJSONText);
-    document.getElementById("msg").innerHTML = msgJSONText;
+    // document.getElementById("msg").innerHTML = msgJSONText;
 
     /* Site 1 */
     /* Information about the PID */
@@ -33,7 +33,7 @@ async function GetData() {
     var values = [];
 
     /* fLen contains the length of the array (number of values) */
-    fLen = msg.features.length
+    var fLen = msg.features.length
     for (var i = 0; i < fLen; i++) {
         if (msg.features[i].properties.monitoring_location_id == sitecode) {
             values.push(msg.features[i].properties.value);
