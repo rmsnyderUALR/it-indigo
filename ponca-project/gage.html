@@ -12,6 +12,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <form id="myform" onsubmit="return false">
+            <div class="formcontainer">
+                <h1>Ponca Project</h1>
+                <fieldset id="detail">
+
+                    <h2>Current River Height</h2>
+                    <input type="submit" value="Display Height" id="displayHeight" name="displayHeight" onclick="getHeight();">
+                    <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="clearform();">
+                    <br><br>
+
+                    <label for="id0" class="formlabel">Location ID: </label>
+                    <span id="id0"></span>
+                    <br>
+                    <label for="heightValue0" class="formlabel">River Height: </label>
+                    <span id="heightValue0"></span>
+                    <span id="heightUnit0"></span>
+                    <br><br>
+
+                    <label for="id1" class="formlabel">Location ID: </label>
+                    <span id="id1"></span>
+                    <br>
+                    <label for="heightValue1" class="formlabel">River Height: </label>
+                    <span id="heightValue1"></span>
+                    <span id="heightUnit1"></span>
+                    <br><br>  
+
+                    <label for="id2" class="formlabel">Location ID: </label>
+                    <span id="id2"></span>
+                    <br>
+                    <label for="heightValue2" class="formlabel">River Height: </label>
+                    <span id="heightValue2"></span>
+                    <span id="heightUnit2"></span>
+                    <br><br>
+
+                    <label for="id3" class="formlabel">Location ID: </label>
+                    <span id="id3"></span>
+                    <br>
+                    <label for="heightValue3" class="formlabel">River Height: </label>
+                    <span id="heightValue3"></span>
+                    <span id="heightUnit3"></span>
+                    <br>
+                    <canvas id="chartjs-0" width="400" height="400"></canvas>
+                    <!-- <canvas id="chartjs-1" width="400" height="400"></canvas>
+                    <canvas id="chartjs-2" width="400" height="400"></canvas> -->
+                </fieldset>
+            </div>
+        </form>
+    </main>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

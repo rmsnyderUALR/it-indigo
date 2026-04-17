@@ -90,91 +90,94 @@ async function getHeight(){
 
         /* fLen contains the length of the array (number of values) */
         var fLen = msg.features.length
-        for (var i = 0; i < fLen; i++) {
+        for (let i = 0; i < fLen; i++) {
             if (msg.features[i].properties.monitoring_location_id == sitecode) {
-                values[i] = msg.features[i].properties.value;
+                if (msg.features[i].properties.value != 0){
+                    values[i] = msg.features[i].properties.value;
+                }
                 dates[i] = msg.features[i].properties.time;
             }
         }
 
         /* Site 2 */
         /* Information about the PID */
-        var sitename = "Boxley"
+        var sitename2 = "Boxley"
         var sitecode2 = "USGS-07055646"
         var siteDescription = "Near Boxley"
 
         /* Holds the dates and values to be graphed */
         var dates2 = [];
         var values2 = [];
+        let j = 0;
 
-        /* fLen contains the length of the array (number of values) */
-        var fLen = msg.features.length
-        for (var i = 0; i < fLen; i++) {
+        for (let  i = 0; i < fLen; i++) {
             if (msg.features[i].properties.monitoring_location_id == sitecode2) {
-                values2[i] = msg.features[i].properties.value;
-                dates2[i] = msg.features[i].properties.time;
+                if (msg.features[i].properties.value != 0){
+                    values2[j] = msg.features[i].properties.value;
+                }
+                dates2[j] = msg.features[i].properties.time;
+                j++;
             }
         }
 
         /* Site 3 */
         /* Information about the PID */
-        var sitename = "Pruitt"
+        var sitename3 = "Pruitt"
         var sitecode3 = "USGS-07055680"
         var siteDescription = "Pruitt"
 
         /* Holds the dates and values to be graphed */
         var dates3 = [];
         var values3 = [];
+        let k = 0;
 
-        /* fLen contains the length of the array (number of values) */
-        var fLen = msg.features.length
-        for (var i = 0; i < fLen; i++) {
+        for (let i = 0; i < fLen; i++) {
             if (msg.features[i].properties.monitoring_location_id == sitecode3) {
-                values3[i] = msg.features[i].properties.value;
-                dates3[i] = msg.features[i].properties.time;
+                if (msg.features[k].properties.value != 0){
+                    values3[k] = msg.features[i].properties.value;
+                }
+                dates3[k] = msg.features[i].properties.time;
+                k++;
             }
         }
         /* Put your code here to display a graph of values and dates for Site 1*/
 
         var ctx = document.getElementById("chartjs-0");
         var myChart = new Chart(ctx, {
-            "type":"line",
-            "data": {
-                "labels": dates, dates2, dates3,
-                "datasets":
-                [{"label":"River Height",
-                    "data": values,
-                    "fill": false,
-                    "borderColor":"#6E7349",
-                    "color":"#000",
-                    "pointRadius":1,
-                    "pointBackgroundColor":"#fff",
-                    "lineTension":0.1
+            type: "line",
+            data: {
+                labels: dates, dates2, dates3,
+                datasets: [
+                {   label: sitename,
+                    data: values,
+                    fill: false,
+                    borderColor:"#6E7349",
+                    pointRadius:0,
+                    pointBackgroundColor:"#fff",
+                    lineTension:0.5
                 },
-                {"label":"River Height",
-                    "data": values3,
-                    "fill": false,
-                    "borderColor":"#8EB6BF",
-                    "color":"#000",
-                    "pointRadius":1,
-                    "pointBackgroundColor":"#fff",
-                    "lineTension":0.1
+                {   label: sitename3,
+                    data: values3,
+                    fill: false,
+                    borderColor:"#8EB6BF",
+                    pointRadius:0,
+                    pointBackgroundColor:"#fff",
+                    lineTension:1
                 },
-                {"label":"River Height",
-                    "data": values2,
-                    "fill": false,
-                    "borderColor":"#D93D1A",
-                    "color":"#000",
-                    "pointRadius":1,
-                    "pointBackgroundColor":"#fff",
-                    "lineTension":0.1
+                {   label: sitename2,
+                    data: values2,
+                    fill: false,
+                    borderColor:"#D93D1A",
+                    pointRadius:0,
+                    pointBackgroundColor:"#fff",
+                    lineTension:2
                 }]},
-            "options":{ 
+            options:{ 
                 responsive: false,
                 maintainAspectRatio: true,
                 title: {
-                display: true,
-                text: 'Ponca Location'
+                    display: true,
+                    text: 'Ponca Location'
                 }
             }
         });
