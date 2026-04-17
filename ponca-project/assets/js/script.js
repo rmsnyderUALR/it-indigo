@@ -181,96 +181,6 @@ async function getHeight(){
                 }
             }
         });
-
-        // /* Site 2 */
-        // /* Information about the PID */
-        // var sitename = "Boxley"
-        // var sitecode2 = "USGS-07055646"
-        // var siteDescription = "Near Boxley"
-
-        // /* Holds the dates and values to be graphed */
-        // var dates2 = [];
-        // var values2 = [];
-
-        // /* fLen contains the length of the array (number of values) */
-        // var fLen = msg.features.length
-        // for (var i = 0; i < fLen; i++) {
-        //     if (msg.features[i].properties.monitoring_location_id == sitecode2) {
-        //         values2[i] = msg.features[i].properties.value;
-        //         dates2[i] = msg.features[i].properties.time;
-        //     }
-        // }
-        // /* Put your code here to display a graph of values and dates for Site 2*/
-
-        // var ctx = document.getElementById("chartjs-1");
-        // var myChart = new Chart(ctx, {
-        //     "type":"line",
-        //     "data": {
-        //         "labels": dates2,
-        //         "datasets":
-        //         [{"label":"River Height",
-        //             "data": values2,
-        //             "fill": false,
-        //             "borderColor":"#228B22",
-        //             "color":"#000",
-        //             "pointRadius":1,
-        //             "pointBackgroundColor":"#fff",
-        //             "lineTension":0.1
-        //         }]},
-        //     "options":{ 
-        //         responsive: false,
-        //         maintainAspectRatio: true,
-        //         title: {
-        //         display: true,
-        //         text: 'Boxley Location'
-        //         }
-        //     }
-        // });
-
-        // /* Site 3 */
-        // /* Information about the PID */
-        // var sitename = "Pruitt"
-        // var sitecode3 = "USGS-07055680"
-        // var siteDescription = "Pruitt"
-
-        // /* Holds the dates and values to be graphed */
-        // var dates3 = [];
-        // var values3 = [];
-
-        // /* fLen contains the length of the array (number of values) */
-        // var fLen = msg.features.length
-        // for (var i = 0; i < fLen; i++) {
-        //     if (msg.features[i].properties.monitoring_location_id == sitecode3) {
-        //         values3[i] = msg.features[i].properties.value;
-        //         dates3[i] = msg.features[i].properties.time;
-        //     }
-        // }
-        // /* Put your code here to display a graph of values and dates for Site 3*/
-
-        // var ctx = document.getElementById("chartjs-2");
-        // var myChart = new Chart(ctx, {
-        //     "type":"line",
-        //     "data": {
-        //         "labels": dates3,
-        //         "datasets":
-        //         [{"label":"River Height",
-        //             "data": values3,
-        //             "fill": false,
-        //             "borderColor":"#228B22",
-        //             "color":"#000",
-        //             "pointRadius":1,
-        //             "pointBackgroundColor":"#fff",
-        //             "lineTension":0.1
-        //         }]},
-        //     "options":{ 
-        //         responsive: false,
-        //         maintainAspectRatio: true,
-        //         title: {
-        //         display: true,
-        //         text: 'Pruitt Location'
-        //         }
-        //     }
-        // });
     }
 }
 
@@ -289,4 +199,8 @@ function clearform(){
     document.getElementById("id3").innerHTML = "";
     document.getElementById("heightValue3").innerHTML = "";
     document.getElementById("heightUnit3").innerHTML = "";
+
+    let canvas0 = document.getElementById("chartjs-0");
+    let context0 = canvas0.getContext('2d');    
+    context0.clearRect(0, 0, canvas0.width, canvas0.height);
 }
