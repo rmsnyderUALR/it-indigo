@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ------------Responsive Image -------------- */
+img{
+    max-width: 100%;
+}
+/* ------------Utility Classes -------------- */
+
+.container{
+    margin: auto;
+    padding: 40px;
+    max-width: 80%;
+}
+
+/* ------------Style Classes -------------- */
+
+body{
+    margin: 0;
+}
+
+main{
+    max-width: 100%;
+}
+
+header.primary{}
+
+#articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .post{
+        border: 1px solid #000;
+        padding: 20px;
+    }
+}
+
+aside{
+    &.container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

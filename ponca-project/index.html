@@ -1,70 +1,74 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Website for canoe rental company in Ponca">
-    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
-    <meta name="author" content="Ryan Snyder">
-    <title>Ponca Project Website</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+<!doctype html>
+<html lang="en">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Website for canoe rental company in Ponca" />
+    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery" />
+    <meta name="author" content="Ryan Snyder" />
+    <title>Ponca Project Website</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
 </head>
 
 <body>
     <main>
-        <form id="myform" onsubmit="return false">
-            <div class="formcontainer">
-                <h1>Ponca Project</h1>
-                <fieldset id="detail">
-
-                    <h2>Current River Height</h2>
-                    <input type="submit" value="Display Height" id="displayHeight" name="displayHeight" onclick="getHeight();">
-                    <input type="submit" formnovalidate value="Clear" id="Clear" name="Clear" onclick="clearform();">
-                    <br><br>
-
-                    <label for="id0" class="formlabel">Location ID: </label>
-                    <span id="id0"></span>
-                    <br>
-                    <label for="heightValue0" class="formlabel">River Height: </label>
-                    <span id="heightValue0"></span>
-                    <span id="heightUnit0"></span>
-                    <br><br>
-
-                    <label for="id1" class="formlabel">Location ID: </label>
-                    <span id="id1"></span>
-                    <br>
-                    <label for="heightValue1" class="formlabel">River Height: </label>
-                    <span id="heightValue1"></span>
-                    <span id="heightUnit1"></span>
-                    <br><br>  
-
-                    <label for="id2" class="formlabel">Location ID: </label>
-                    <span id="id2"></span>
-                    <br>
-                    <label for="heightValue2" class="formlabel">River Height: </label>
-                    <span id="heightValue2"></span>
-                    <span id="heightUnit2"></span>
-                    <br><br>
-
-                    <label for="id3" class="formlabel">Location ID: </label>
-                    <span id="id3"></span>
-                    <br>
-                    <label for="heightValue3" class="formlabel">River Height: </label>
-                    <span id="heightValue3"></span>
-                    <span id="heightUnit3"></span>
-                    <br>
-                    <canvas id="chartjs-0" width="600" height="600"></canvas>
-                    <!-- <canvas id="chartjs-1" width="400" height="400"></canvas>
-                    <canvas id="chartjs-2" width="400" height="400"></canvas> -->
-                </fieldset>
-                <h2><a href="gage.html">River Gage</a></h2>
+        <header class="primary">
+            <h1>Ponca Project</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="canoe.html">Canoe Rentals</a></li>
+                    <li><a href="cabin.html">Cabin Rentals</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gage.html">River Levels</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="carousel">
+            <div class="fade container">
+                <div><img src="assets/img/canoe.jpg" alt="A person paddling a canoe through a ravine"></div>
+                <div><img src="assets/img/raft-front.jpg" alt="POV view of someone in a raft on the river"></div>
+                <div><img src="assets/img/family-raft.jpg" alt="A family paddling in a raft on turbulent waters"></div>
             </div>
-        </form>
+        </section>
+        <section id="content" class="container">
+            <div class="intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ex incidunt excepturi odio at, architecto itaque dolore adipisci reiciendis non voluptas esse suscipit.</div>
+            <section id="articles">
+                <article class="post">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, quasi?</article>
+                <article class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, voluptatum?</article>
+                <article class="post">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, suscipit.</article>
+                <article class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque.</article>
+                <article class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, repellat?</article>
+                <article class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, officia?</article>
+            </section>
+        </section>
+        <aside id="info" class="container">
+            <article class="widget">
+                <iframe width="400" height="350" style="border:0" loading="lazy" allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=36%C2%B001'33.6%22N%2093%C2%B021'54.6%22W&key=AIzaSyA_88tgXm_ZrWXm4tqo0xdZXDc9Ovd0SYo"></iframe>
+            </article>
+            <article class="widget">
+                <ul>
+                    <li>Example</li>
+                    <li>Example</li>
+                    <li>Example</li>
+                    <li>Example</li>
+                </ul>
+            </article>
+        </aside>
+        <footer id="colophon">
+            <h6>&copy; Control Alt Elite | <a href="#top">Top</a></h6>
+        </footer>
     </main>
-    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>
+    <script src="assets/js/carousel.js"></script>
 </body>
+
+</html>
