@@ -14,5 +14,7 @@ function clearForm() {
     document.getElementById("message").value = "";
     document.getElementById("emailError").innerHTML = "";
     document.getElementById("messageError").innerHTML = "";
+
+    document.getElementById("detail").innerHTML = "<h3>Thank you for contacting us! Please allow 48 hours for a response.</h3>";
 }
 
