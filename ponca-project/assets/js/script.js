@@ -1,6 +1,7 @@
 async function getHeight(){
     "use strict";
-
+    Chart.defaults.global.defaultFontColor = "#fff";
+    
     // Get a reference to the form - Use the ID of the form
     let form = $("#myform");
 
